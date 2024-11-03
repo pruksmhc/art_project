@@ -5,7 +5,7 @@ from playsound import playsound
 # Replace with your actual serial port (e.g., '/dev/tty.usbmodemXXXX')
 serial_port = '/dev/cu.usbmodem2101'
 baud_rate = 9600  # Match this with your Arduino's baud rate
-sound_file = '/Users/yadapruksachatkun/Downloads/mmm.mp3'
+sound_file = '/Users/yadapruksachatkun/Downloads/mmm.mp3'//REPLACE
 # Open the serial connection
 ser = serial.Serial(serial_port, baud_rate)
 time.sleep(2)  # Wait for the serial connection to initialize
