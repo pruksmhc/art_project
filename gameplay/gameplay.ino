@@ -52,13 +52,16 @@ void emptyTrash() {
   myServo.write(counterClockwisePosition);
   
   // Wait 5 seconds
-  delay(6000);
+  delay(3000);
+  nextSlide();
+  delay(1000);
+  nextSlide();
 
   // Rotate the motor back to the starting position
   myServo.write(startPosition);
 
   // Wait 3 seconds
-  delay(3000);
+  delay(1000);
 }
 void glitch() {
       // Slide for glitching
@@ -71,8 +74,9 @@ void glitch() {
    nextSlide();
    nextSlide();
    nextSlide();
-   delay(6000); // VIDEO PLAYING OF HACKER
+    // VIDEO PLAYING OF HACKER
    nextSlide();
+   delay(6200); //6 seconds video. 
 }
 
 void loop() {
@@ -85,8 +89,7 @@ void loop() {
     countdownSlides();
     Serial.println("Turn on funnel, start game.");
     digitalWrite(funnelPin, HIGH);
-    //delay(65000);  // 65 seconds delay until end of game 
-    delay(5000); 
+    delay(65000);  // 65 seconds delay until end of game 
 
     // CONGRATS!
     Serial.println("Turn off funnel");
@@ -95,11 +98,11 @@ void loop() {
     delay(2500);
 
     glitch(); 
-  
     // 3. Empty the trash
     emptyTrash();
-
-    // 4. Restart slide
+    nextSlide(); // Congrats on finishing slide. 
+    delay(3000);
+    // 4. Restart game
     Keyboard.press(KEY_HOME);
     delay(100);
     Keyboard.release(KEY_HOME);
