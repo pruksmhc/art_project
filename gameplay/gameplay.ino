@@ -9,8 +9,8 @@ int servoPin = 5;  // Pin connected to the servo
 
 // VARIABLES
 int buttonState = HIGH;   // Variable to store the button state
-int startPosition = 90;  // Starting position (90 degrees)
-int counterClockwisePosition = 180;  // Position for counterclockwise rotation (180 degrees)
+int startPosition = 0;  // Starting position (90 degrees)
+int counterClockwisePosition = 60;  // Position for counterclockwise rotation (180 degrees)
 
 
 void nextSlide(){
